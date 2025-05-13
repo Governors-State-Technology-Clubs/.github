@@ -1,0 +1,64 @@
+name: 🐍 Python Development Issue
+description: Report bugs, request features, or suggest enhancements related to Python development.
+title: "[Python]: "
+labels: [python]
+
+body:
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: 🔎 Type of Issue
+      description: What kind of issue are you reporting?
+      options:
+        - Bug Report
+        - Feature Request
+        - Code Enhancement
+        - Documentation Update
+        - Build/Dependency Issue
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 📝 Summary
+      description: Briefly describe the problem or proposal.
+      placeholder: "The API client fails to handle 401 responses correctly..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: 🧪 Steps to Reproduce (for bugs)
+      description: Provide detailed steps to reproduce the issue. Include actual vs. expected behavior.
+      placeholder: |
+        1. Run the script with `python main.py`
+        2. Observe the unexpected crash
+        Expected: Script exits cleanly
+        Actual: Traceback with KeyError
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 📦 Environment Details
+      description: List your OS, Python version, and relevant packages.
+      placeholder: |
+        - OS: Ubuntu 22.04
+        - Python: 3.11.2
+        - Virtualenv: poetry
+        - Relevant packages: requests 2.31.0, Django 4.2
+    validations:
+      required: true
+
+  - type: textarea
+    id: related_context
+    attributes:
+      label: 📚 Related Context
+      description: Link to any related issues, discussions, or PRs.
+      placeholder: "#123, #456, or relevant docs"
+    validations:
+      required: false
